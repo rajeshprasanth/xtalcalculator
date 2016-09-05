@@ -1,0 +1,59 @@
+# @configure_input@
+#
+# Copyright (C) 2013-2015 <Anandavadivel Rajesh Prashanth>
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY, to the extent permitted by law; without
+# even the implied warranty of MERCHANTABILITY or FITNESS FOR A
+# PARTICULAR PURPOSE.
+#---------------------------------------------------------------------------
+.SUFFIXES : .o .c .f90
+#
+#
+#---------------------------------#
+# .f.o and .c.o: do not modify    #
+#---------------------------------#
+#
+.f90.o:
+	$(FC) $(FCFLAGS) $(MODULES) -c $*.f90 -o $*.o
+.c.o:
+	$(CC) $(CFLAGS) -c $*.c -o $*.o
+#
+@SET_MAKE@
+#
+#---------------------------------#
+# Flags for Fortran modules       #
+#---------------------------------# 
+#
+MOD_FLAGS = @fcmodflag@
+#
+#---------------------------------#
+# Fortran and C compilers         #
+#---------------------------------#
+#
+FC = @fc@
+CC = @cc@
+#
+#---------------------------------#
+# Fortran and C compilers Flags   #
+#---------------------------------#
+#
+FCFLAGS = @fcflags@
+CFLAGS = @cflags@
+#
+#---------------------------------#
+# Miscellaneous flags             #
+#---------------------------------#
+#
+AR = @ar@
+ARFLAGS = @arflags@
+RANLIB = @ranlib@
+INSTALL = @install@
+MAKEDIR = @makedir@
+LN_S = @lns@
+SED = @sed@
+AWK = @awk@
+GREP = @grep@
+EGREP = @egrep@
+TAR = @tar@
+WGET = @wget@

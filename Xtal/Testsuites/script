@@ -1,0 +1,75 @@
+#!/bin/bash
+#
+
+RUN_CMD="../Bin/xtalcalculator.x"
+#
+#
+#------------------------------------------------------------------------------------
+cat > NaCl.in << EOF
+	 1 	                 !	index bravais lattice index
+	 a	 5.620000 	 !	a (angstrom)
+	 b	 5.620000 	 !	b (angstrom)
+	 c	 5.620000 	 !	c (angstrom)
+	 alpha	 90.000000 	 !	alpha  (degree)
+	 beta	 90.000000  	 !	beta   (degree)
+	 gamma	 90.000000 	 !	gamma  (degree)
+EOF
+#-----------------------------------------------------------------------------------
+#
+#-----------------------------------------------------------------------------------
+cat > ZnS.in << EOF
+	 3 	                 !	index bravais lattice index
+	 a	 5.414500 	 !	a (angstrom)
+	 b	 5.414500 	 !	b (angstrom)
+	 c	 5.414500 	 !	c (angstrom)
+	 alpha	 90.000000 	 !	alpha  (degree)
+	 beta	 90.000000  	 !	beta   (degree)
+	 gamma	 90.000000 	 !	gamma  (degree)
+EOF
+#-----------------------------------------------------------------------------------
+#
+#-----------------------------------------------------------------------------------
+cat > Cu.in << EOF
+ 	 2                       !	index bravais lattice index
+	 a	 3.614960 	 !	a (angstrom)
+	 b	 3.614960 	 !	b (angstrom)
+	 c	 3.614960 	 !	c (angstrom)
+	 alpha	 90.000000 	 !	alpha  (degree)
+	 beta	 90.000000  	 !	beta   (degree)
+	 gamma	 90.000000 	 !	gamma  (degree)
+EOF
+#-----------------------------------------------------------------------------------
+echo "Starting Test 1..............."
+sleep 5
+$RUN_CMD NaCl.in NaCl.out > NaCl.log
+if [ ! -f NaCl.log ]; then
+	echo "Test 1 failed"
+else
+	echo "Completed Test 1..............."
+fi
+#
+#-----------------------------------------------------------------------------------
+#
+echo "Starting Test 2..............."
+sleep 5
+$RUN_CMD ZnS.in ZnS.out > ZnS.log
+if [ ! -f ZnS.log ]; then
+	echo "Test 2 failed"
+else
+	echo "Completed Test 2..............."
+fi
+#
+#-----------------------------------------------------------------------------------
+#
+echo "Starting Test 3..............."
+sleep 5
+$RUN_CMD Cu.in Cu.out > Cu.log
+if [ ! -f Cu.log ]; then
+	echo "Test 3 failed"
+else
+	echo "Completed Test 3..............."
+fi
+#
+#
+#
+/bin/rm -f *.in *.out *.log *~

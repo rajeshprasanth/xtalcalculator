@@ -1,0 +1,5 @@
+#!/bin/bash
+#
+. ../../path_variables
+RUN_CMD="$BIN_DIR/xtalcalculator.x" 
+$RUN_CMD ZnS.in ZnS.out

@@ -1,0 +1,3 @@
+TOP_DIR=`cd ../../;pwd`
+BIN_DIR=$TOP_DIR/Bin
+

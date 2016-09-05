@@ -1,0 +1,37 @@
+#include <stdio.h>
+#include <string.h>
+#include "inputmaker.h"
+int main()	{
+
+	long lind; 	
+	char ch[8];
+	int index;
+	
+	printf("\t=---------------------------------------------------=\n");	
+	printf("\t                    INPUT MAKER                      \n");
+	printf("\t=---------------------------------------------------=\n");
+	printf("\v");
+	do	{
+		printf("\tDo you need tutorial ? (yes/no)>>>\t");
+		scanf("%s",ch);
+		printf("\v");
+	
+		if (strcmp(ch, "yes") == 0)	{
+    			get_tutorial();
+			lind = 1;
+		}
+		else	if(strcmp(ch, "no") == 0)	{
+				index = get_index();
+				bravaiscall(index);
+		}		
+		else	{
+			printf("\v"); 
+			printf("\n\tError: Incorrect option! Try again.\n");
+			printf("\v");
+			exit (EXIT_SUCCESS);
+		}
+
+	}while(lind>0);
+ 	return (EXIT_SUCCESS);
+}
+

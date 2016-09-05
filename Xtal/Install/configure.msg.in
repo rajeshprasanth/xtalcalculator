@@ -1,0 +1,22 @@
+---------------------------------------------------------------------------------
+XtalCalculator-2.1.0-rev001  Configuration report
+---------------------------------------------------------------------------------
+The had configure script found most of the programs. Programs installed in 
+non-standard locations may not be found unless the PATH variables are defined.
+
+Use configure --help for more informations on PATH.
+
+Summary of important options:
+
+  * Build architecture     : @hostcpu@-@hostvendor@-@hostos@
+  
+  * Fortran compiler       : @fc@
+  * Fortran compiler flags : @fcflags@ 
+  * Fortran module flags   : @fcmodflag@
+
+  * C compiler             : @cc@
+  * C compiler flags       : @cflags@ 
+ 
+Configuration complete.
+You may now type "make" to build XtalCalculator.
+---------------------------------------------------------------------------------

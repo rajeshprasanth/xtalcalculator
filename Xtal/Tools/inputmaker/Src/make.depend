@@ -1,0 +1,4 @@
+inputmaker.o : ./inputmaker.h
+get_data.o : ./inputmaker.h
+bravaiscall.o : ./inputmaker.h
+writeoutput.o : ./inputmaker.h

@@ -1,0 +1,7 @@
+	 10 	                 !	index bravais lattice index
+	 a	 1.000000 	 !	a (angstrom)
+	 b	 1.000000 	 !	b (angstrom)
+	 c	 1.000000 	 !	c (angstrom)
+	 alpha	 90.000000 	 !	alpha  (degree)
+	 beta	 90.000000  	 !	beta   (degree)
+	 gamma	 90.000000 	 !	gamma  (degree)

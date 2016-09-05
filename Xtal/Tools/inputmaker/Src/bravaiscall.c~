@@ -1,0 +1,73 @@
+#include <stdio.h>
+#include "inputmaker.h"
+void bravaiscall(int index)	{
+	
+	float a,b,c;
+	float alpha,beta,gamma;
+
+	if ( index == 1|| index == 2 || index ==3 )	{
+		a = get_a();
+		b = a;
+		c = a;
+		alpha = 90.0000;
+		beta = 90.0000;
+		gamma = 90.0000;
+	}
+	else if ( index == 4 || index == 6 || index ==7 )	{
+		a = get_a();
+	        b = a;
+		c = get_c();
+                alpha = 90.0000;
+		beta = 90.0000;
+		gamma = 90.0000;
+
+	}
+	else if ( index == 5 ||index == -5 )	{
+		a = get_a();
+		b = a;
+		c = get_c();
+		alpha = get_alpha();
+		beta = 90.0000;
+		gamma = 90.0000;
+	}
+	else if ( index == 8 || index == 9 || index == -9 || index == 10 || index == 11)	{
+		a = get_a();
+		b = get_b();
+		c = get_c();
+		alpha = 90.0000;
+		beta = 90.0000;
+		gamma = 90.0000;
+	}
+	else if ( index == 12 || index == 13 )	{
+		a = get_a();
+		b = get_b();
+		c = get_c();
+		alpha = 90.0000;
+		beta = 90.0000;	
+		gamma = get_gamma();
+	}
+	else if ( index == -12 )	{
+		a = get_a();
+		b = get_b();
+		c = get_c();
+	 	alpha = 90.0000;
+		beta = get_beta();
+		gamma = 90.0000;
+	}
+	else if ( index == 14 )		{
+		a = get_a();
+		b = get_b();
+		c = get_c();
+		alpha = get_alpha();
+		beta = get_beta();
+		gamma = get_gamma();
+	}
+	else if ( index >14 )	{
+		printf("\v");
+		printf("\tError: Incorrect bravais index !\n");
+		printf("\v");		
+		exit(EXIT_SUCCESS);
+	}
+	writeoutput(index,a,b,c,alpha,beta,gamma);
+}
+

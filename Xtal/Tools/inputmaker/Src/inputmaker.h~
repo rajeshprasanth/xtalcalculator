@@ -1,0 +1,15 @@
+#define EXIT_SUCCESS 0
+
+void get_tutorial(void);
+int get_index(void);
+void bravaiscall(int);
+extern void exit(int);				
+float get_a(void);
+float get_b(void);
+float get_c(void);
+float get_alpha(void);
+float get_beta(void);
+float get_gamma(void);
+void writeoutput(int,float,float,float,float,float,float);	
+	
+

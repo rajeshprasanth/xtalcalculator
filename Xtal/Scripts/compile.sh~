@@ -1,0 +1,12 @@
+#!/bin/bash
+#
+cd ..
+
+if [ ! -d Bin ]; then
+mkdir Bin
+fi
+
+cd Src 
+cp xtalcalculator.x ../Bin/xtalcalculator.x
+cp resolve.x ../Bin/resolve.x
+
